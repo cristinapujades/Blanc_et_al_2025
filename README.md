@@ -45,85 +45,85 @@ Channel Prefix: "CHN"
 # GUI Usage
 The graphical user interface provides three main operational modes:
 
-Supervised Alignment Mode:
-Align images with or without using a neural network and user inputs
-Interactive 3D visualization for precise adjustments
-Correction UI for fine-tuning transformations
+<br>Supervised Alignment Mode:
+<br>Align images with or without using a neural network and user inputs
+<br>Interactive 3D visualization for precise adjustments
+<br>Correction UI for fine-tuning transformations
 
-Unsupervised Alignment Mode:
-Apply a pre-trained model to new data
-Batch process multiple samples
-Support for all registration types (channel, drift, jitter, etc.)
+<br>Unsupervised Alignment Mode:
+<br>Apply a pre-trained model to new data
+<br>Batch process multiple samples
+<br>Support for all registration types (channel, drift, jitter, etc.)
 
-Supervised Training Mode:
-Train a new registration model with user guidance
-Data augmentation capabilities
-Progress tracking and model validation
+<br>Supervised Training Mode:
+<br>Train a new registration model with user guidance
+<br>Data augmentation capabilities
+<br>Progress tracking and model validation
 
-Registration Net Architecture:
-The neural network architecture consists of several key components:
-Feature Extractor:
-Multi-level feature extraction with residual connections and progressive downsampling:
+<br>Registration Net Architecture:
+<br>The neural network architecture consists of several key components:
+<br>Feature Extractor:
+<br>Multi-level feature extraction with residual connections and progressive downsampling:
 
-Level 0: Initial downsampling (1/2) with 16 channels
-Level 1: Moderate expansion (1/4) with 32 channels
-Level 2: Intermediate expansion with 64 channels
-Level 3: Balanced growth (1/8) with 128 channels
-Level 4: Deep features (1/16) with 256 channels
+<br>Level 0: Initial downsampling (1/2) with 16 channels
+<br>Level 1: Moderate expansion (1/4) with 32 channels
+<br>Level 2: Intermediate expansion with 64 channels
+<br>Level 3: Balanced growth (1/8) with 128 channels
+<br>Level 4: Deep features (1/16) with 256 channels
 
-Feature Delta:
-Computes transformation parameters between corresponding features:
+<br>Feature Delta:
+<br>Computes transformation parameters between corresponding features:
 
-Channel attention mechanism for feature weighting:
-Sequential rotation computation in Z-Y-X order
-Translation estimation across multiple feature levels
+<br>Channel attention mechanism for feature weighting:
+<br>Sequential rotation computation in Z-Y-X order
+<br>Translation estimation across multiple feature levels
 
-Transformation Heads:
-Final transformation prediction networks:
-Translation prediction network
-Rotation prediction network
+<br>Transformation Heads:
+<br>Final transformation prediction networks:
+<br>Translation prediction network
+<br>Rotation prediction network
 
-Loss Function:
-Specialized loss function for rigid transformation:
+<br>Loss Function:
+<br>Specialized loss function for rigid transformation:
 
-MSE for rotation and translation components
-Rotation penalty for large angles
+<br>MSE for rotation and translation components
+<br>Rotation penalty for large angles
 
-Advanced Features:
-Data Augmentation
-Enhance training data with synthetic transformations:
+<br>Advanced Features:
+<br>Data Augmentation
+<br>Enhance training data with synthetic transformations:
 
-Random rotations (configurable angle range)
-Random translations (configurable magnitude)
-Augmentation factor controls quantity of synthetic samples
+<br>Random rotations (configurable angle range)
+<br>Random translations (configurable magnitude)
+<br>Augmentation factor controls quantity of synthetic samples
 
-Training Dynamics
-Comprehensive tracking of training progress:
+<br>Training Dynamics
+<br>Comprehensive tracking of training progress:
 
-Loss trajectories
-Learning rate adaptation
-Epoch timing
-Model checkpointing
+<br>Loss trajectories
+<br>Learning rate adaptation
+<br>Epoch timing
+<br>Model checkpointing
 
-Interactive Visualization
-VTK-based 3D visualization with:
+<br>Interactive Visualization
+<br>VTK-based 3D visualization with:
 
-Multi-planar viewing (XY, YZ, XZ)
-Independent brightness/contrast controls
-Registration quality assessment tools
+<br>Multi-planar viewing (XY, YZ, XZ)
+<br>Independent brightness/contrast controls
+<br>Registration quality assessment tools
 
-Core Classes
-RegistrationNet: Main neural network model for registration
-TrainingWorker: Handles model training workflow
-RegistrationWorker: Performs image registration using trained models
-FileSorting: Organizes files based on naming conventions
-VisualizationData: Container for visualization parameters
-ImagePair: Container for pairs of images to be registered
+# Core Classes
+<br>RegistrationNet: Main neural network model for registration
+<br>TrainingWorker: Handles model training workflow
+<br>RegistrationWorker: Performs image registration using trained models
+<br>FileSorting: Organizes files based on naming conventions
+<br>VisualizationData: Container for visualization parameters
+<br>ImagePair: Container for pairs of images to be registered
 
-Settings Classes
-TrainingSettings: Configuration for model training
-RegistrationSettings: Configuration for image registration
-SettingsFactory: Creates appropriate settings instances
+# Settings Classes
+<br>TrainingSettings: Configuration for model training
+<br>RegistrationSettings: Configuration for image registration
+<br>SettingsFactory: Creates appropriate settings instances
 
 # Troubleshooting
 Common issues and their solutions:
