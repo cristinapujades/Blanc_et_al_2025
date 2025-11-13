@@ -2,10 +2,15 @@
 A 3D image rigid registration and alignment tool designed for microscopy data, with neural network-based capabilities.
 
 # Overview
-Align is a Python package that provides tools for aligning 3D microscopy images. It features both neural network-based approaches and manual methods, with an interactive GUI for ease of use. The package is especially suited for alignment of samples that are multi-channel and offers experimental options for time-lapse microscopy data.
+RAD is a Python package that provides tools for aligning 3D microscopy images. It features both neural network-based approaches and manual methods, with an interactive GUI for ease of use. The package is especially suited for alignment of samples that are multi-channel and offers experimental options for time-lapse microscopy data.
 
 # Features
 Neural Network-Based Registration: Uses a custom architecture with feature extraction and progressive pathway for accurate 3D image alignment
+
+<img width="1172" height="357" alt="image" src="https://github.com/user-attachments/assets/e8af55ef-0ccc-4fac-a2ae-d6c5e2d0ec7c" />
+A: Training dataset augmentation
+B: Overall convolutional neural network architecture
+C: Details of feature extraction layers
 
 Multiple Registration Modes:
 Channel Alignment: Align different channels within the same sample
