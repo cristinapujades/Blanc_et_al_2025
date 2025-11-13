@@ -12,6 +12,8 @@ A: Training dataset augmentation
 B: Overall convolutional neural network architecture
 C: Details of feature extraction layers
 
+
+
 Multiple Registration Modes:
 Channel Alignment: Align different channels within the same sample
 Batch Processing: Align multiple samples to a common reference
