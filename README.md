@@ -15,16 +15,10 @@ C: Details of feature extraction layers
 
 # Registration Modes
 Channel Alignment: Align different channels within the same sample
-Batch Processing: Align multiple samples to a common reference
-Drift Correction: Correct for sample drift in time-lapse imaging
-Jitter Correction: Stabilize images with reference to a windowed average
-Global Reference Alignment: Align all timepoints using a reference frame
-
-
-Interactive GUI: User-friendly interface for parameter setting and visualization
-Interactive Correction UI: Manual adjustment tools for fine-tuning alignments assisted by neural network
-Flexible File Organization: Handles various file naming conventions
-
+<br>Batch Processing: Align multiple samples to a common reference
+<br>Drift Correction: Correct for sample drift in time-lapse imaging
+<br>Jitter Correction: Stabilize images with reference to a windowed average
+<br>Global Reference Alignment: Align all timepoints using a reference frame
 
 # Requirements
 Python 3.8+
